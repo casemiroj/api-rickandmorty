@@ -4,11 +4,13 @@ fetch('https://rickandmortyapi.com/api/character')
     const container = document.querySelector('.container');
     json.results.map(results => {
       container.innerHTML += `
-        <div> 
-          <img src='${results.image}'>
-          <p>${results.name}</p>
-          <p>${results.gender}</p>
-          <p>${results.species}</p>
+        <div class='card'>
+          <div class='card-img-container'>
+            <img src='${results.image}'>
+          </div>
+          <p class='card-name'>${results.name}</p>
+          <p class='card-gender'>${results.gender}</p>
+          <p class='card-species'>${results.species}</p>
         </div>  
       `
     })
